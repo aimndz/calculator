@@ -1,0 +1,169 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+:root {
+  --primary-clr-900: #222831;
+  --primary-clr-500: #393e46;
+  --primary-clr-100: #eeeeee;
+
+  --accent-clr-100: #d65a31;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--primary-clr-100);
+}
+
+button {
+  border: 0;
+}
+
+main {
+  width: 100%;
+  padding: 1em;
+}
+
+.base {
+  color: var(--primary-clr-100);
+  background-color: var(--primary-clr-900);
+  max-width: 430px;
+  border-radius: 25px;
+  padding: 2em;
+  height: 80vh;
+  margin: 0 auto;
+}
+
+.accent-clr {
+  background-color: var(--accent-clr-100);
+  color: var(--primary-clr-900);
+}
+
+.primary-clr {
+  background-color: var(--primary-clr-500);
+  color: var(--primary-clr-100);
+}
+
+.title {
+  text-align: center;
+  padding-bottom: 1.5em;
+  font-size: clamp(1.5em, 2vh, 2em);
+  letter-spacing: 3px;
+}
+
+.container {
+  height: 87%;
+}
+
+.screen {
+  width: 100%;
+  background-color: var(--primary-clr-500);
+  padding: 1em;
+  height: 25%;
+  border-radius: 10px;
+  margin-bottom: 2em;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.screen-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  flex-direction: column;
+  font-weight: 500;
+  height: 100%;
+}
+
+.screen__upper {
+  font-size: 1.5em;
+}
+
+.screen__lower {
+  font-size: 3em;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.buttons {
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+}
+
+.btn {
+  height: 80%;
+  font-size: 1.8em;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  transition: 0.3s;
+}
+.btn:hover {
+  opacity: 0.7;
+}
+
+.sqr-btn,
+.round-btn {
+  width: 20%;
+}
+
+.sqr-btn {
+  border-radius: 0.5em;
+}
+
+.round-btn {
+  border-radius: 100px;
+}
+.large-btn {
+  width: 47%;
+  border-radius: 0.5em;
+}
+
+.footer {
+  letter-spacing: 1px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  color: var(--primary-clr-900);
+  font-weight: 600;
+}
+
+@media (max-width: 400px) {
+  .base {
+    width: 95%;
+    height: 60vh;
+    padding: 1em;
+  }
+
+  .screen__lower {
+    font-size: 2em;
+  }
+
+  .screen__upper {
+    font-size: 1em;
+  }
+
+  .btn {
+    font-size: 1.3em;
+  }
+
+  .container {
+    height: 80%;
+  }
+}
