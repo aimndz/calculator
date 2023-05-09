@@ -51,17 +51,13 @@ function displayScreen(num) {
 }
 
 function evaluate() {
-  if (display.includes(".")) {
-    previousNum = parseFloat(previousNum);
-    currentNum = parseFloat(currentNum);
-  } else {
-    previousNum = parseInt(previousNum);
-    currentNum = parseInt(currentNum);
-  }
+  previousNum = parseInt(previousNum);
+  currentNum = parseInt(currentNum);
 
   result = operate(operatorEl, previousNum, currentNum);
+  result = parseFloat(result.toFixed(5));
   previousNum = result;
-  parseFloat(result.toFixed(5));
+
   currentNum = 0;
   computable = true;
 }
@@ -75,7 +71,6 @@ function displayResult() {
     displayScreen(`=${result}`);
     upperScreenEl.textContent = display;
     display = result.toString();
-    console.log(typeof result);
 
     if (!isFinite(result)) {
       lowerScreenEl.textContent = "You can't";
