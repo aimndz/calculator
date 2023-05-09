@@ -14,8 +14,14 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jura&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
-    <script src="index.js"></script>
+    <script src="index.js" defer></script>
     <title>CALL ME LATUR</title>
   </head>
   <body>
@@ -26,45 +32,42 @@
         <div class="container">
           <div class="screen">
             <div class="screen-container">
-              <div id="upperScreen" class="screen__upper">
-                <p>1 + 2</p>
+              <div class="screen__upper">
+                <p id="upperScreen"></p>
               </div>
-              <div id="lowerScreen" class="screen__lower">
-                <p>= 3</p>
+              <div class="screen__lower">
+                <p id="lowerScreen">0</p>
               </div>
             </div>
           </div>
           <div class="buttons">
             <div class="row">
-              <button class="btn sqr-btn accent-clr">AC</button>
-              <button class="btn sqr-btn accent-clr">
-                <i class="fa-solid fa-delete-left"></i>
-              </button>
-              <button class="btn sqr-btn accent-clr">%</button>
-              <button class="btn sqr-btn accent-clr">/</button>
+              <button id="allClear" class="btn large-btn accent-clr">AC</button>
+              <button class="btn sqr-btn accent-clr" operator>%</button>
+              <button class="btn sqr-btn accent-clr" operator>÷</button>
             </div>
             <div class="row">
-              <button class="btn sqr-btn primary-clr">7</button>
-              <button class="btn sqr-btn primary-clr">8</button>
-              <button class="btn sqr-btn primary-clr">9</button>
-              <button class="btn sqr-btn accent-clr">x</button>
+              <button class="btn sqr-btn primary-clr" number>7</button>
+              <button class="btn sqr-btn primary-clr" number>8</button>
+              <button class="btn sqr-btn primary-clr" number>9</button>
+              <button class="btn sqr-btn accent-clr" operator>x</button>
             </div>
             <div class="row">
-              <button class="btn sqr-btn primary-clr">4</button>
-              <button class="btn sqr-btn primary-clr">5</button>
-              <button class="btn sqr-btn primary-clr">6</button>
-              <button class="btn sqr-btn accent-clr">-</button>
+              <button class="btn sqr-btn primary-clr" number>4</button>
+              <button class="btn sqr-btn primary-clr" number>5</button>
+              <button class="btn sqr-btn primary-clr" number>6</button>
+              <button class="btn sqr-btn accent-clr" operator>-</button>
             </div>
             <div class="row">
-              <button class="btn sqr-btn primary-clr">1</button>
-              <button class="btn sqr-btn primary-clr">2</button>
-              <button class="btn sqr-btn primary-clr">3</button>
-              <button class="btn sqr-btn accent-clr">+</button>
+              <button class="btn sqr-btn primary-clr" number>1</button>
+              <button class="btn sqr-btn primary-clr" number>2</button>
+              <button class="btn sqr-btn primary-clr" number>3</button>
+              <button class="btn sqr-btn accent-clr" operator>+</button>
             </div>
             <div class="row">
-              <button class="btn large-btn primary-clr">0</button>
-              <button class="btn sqr-btn primary-clr">.</button>
-              <button class="btn round-btn accent-clr">=</button>
+              <button class="btn large-btn primary-clr" number>0</button>
+
+              <button id="equal" class="btn large-btn accent-clr">=</button>
             </div>
           </div>
         </div>
