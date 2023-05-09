@@ -29,7 +29,7 @@ button {
 
 main {
   width: 100%;
-  padding: 1em;
+  padding-inline: 1rem;
 }
 
 .base {
@@ -72,6 +72,7 @@ main {
   margin-bottom: 2em;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
     rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  overflow: hidden;
 }
 
 .screen-container {
@@ -81,6 +82,7 @@ main {
   flex-direction: column;
   font-weight: 500;
   height: 100%;
+  font-family: "Jura", sans-serif;
 }
 
 .screen__upper {
@@ -124,9 +126,6 @@ main {
   border-radius: 0.5em;
 }
 
-.round-btn {
-  border-radius: 100px;
-}
 .large-btn {
   width: 47%;
   border-radius: 0.5em;
@@ -142,13 +141,20 @@ main {
   text-align: center;
   color: var(--primary-clr-900);
   font-weight: 600;
+  font-family: "Jura", sans-serif;
 }
 
 @media (max-width: 400px) {
+  .title {
+    padding-bottom: 1em;
+  }
+
   .base {
-    width: 95%;
-    height: 60vh;
-    padding: 1em;
+    padding: 1.5em 1em 0;
+  }
+
+  .screen {
+    height: 20%;
   }
 
   .screen__lower {
@@ -161,9 +167,5 @@ main {
 
   .btn {
     font-size: 1.3em;
-  }
-
-  .container {
-    height: 80%;
   }
 }
